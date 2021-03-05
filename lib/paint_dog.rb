@@ -2,6 +2,7 @@ class PaintDog
 
   def initialize
     @word = words.sample
+    @lives = 7
   end
 
   def words 
