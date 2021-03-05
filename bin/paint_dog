@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require 'pry'
+require_relative '../lib/paint_dog.rb'
+
+puts "Welcome to Paint Dog!"
+game = PaintDog.new
+game.play

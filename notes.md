@@ -1,0 +1,1 @@
+To run the game: ruby bin/paint_dog
