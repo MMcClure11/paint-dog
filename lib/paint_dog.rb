@@ -15,4 +15,12 @@ class PaintDog
     ]
   end
 
+
+  def play
+    #ask user for a letter
+    puts "New game started... your word is #{ @word.first.size } characters long"
+    puts "To exit the game at any point type 'exit'"
+
+  end
+
 end
