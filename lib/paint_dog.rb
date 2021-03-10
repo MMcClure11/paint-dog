@@ -57,10 +57,6 @@ class PaintDog
         print_teaser guess
 
         if @word.first === @word_teaser.split.join
-          puts "@word_teaser: #{@word_teaser}"
-          puts "@word_teaser.split: #{@word_teaser.split}"
-          puts "@word_teaser.split.join: #{@word_teaser.split.join}"
-          puts "@word.first:  #{@word.first}"
           puts "Congratulations... you have won this round!"
         else
           make_guess
