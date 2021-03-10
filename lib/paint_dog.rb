@@ -47,9 +47,15 @@ class PaintDog
       if guess == "exit"
         puts "Thanks for playing!"
 
+      elsif guess.length > 1
+        puts "only guess one letter at a time please!"
+        make_guess
+
       elsif good_guess
         puts "You are correct!"
+
         print_teaser guess
+
         if @word.first === @word_teaser.split.join
           puts "Congratulations... you have won this round!"
         else
