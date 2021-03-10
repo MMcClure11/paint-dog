@@ -23,6 +23,20 @@ class PaintDog
     puts @word_teaser
   end
 
+  def make_guess
+    if @lives > 0
+      puts "Enter a letter"
+      guess = gets.chomp
+
+      good_guess = @word.first.include? guess 
+      if guess == "exit"
+        puts "Thanks for playing!"
+      end
+    else 
+      puts "Game over... better luck next time!"
+    end
+  end
+
   def play
     #ask user for a letter
     puts
@@ -33,6 +47,8 @@ class PaintDog
 
     puts
     puts "Clue: #{ @word.last }"
+
+    make_guess
   end
 
 end
