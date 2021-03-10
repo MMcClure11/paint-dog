@@ -29,8 +29,13 @@ class PaintDog
       guess = gets.chomp
 
       good_guess = @word.first.include? guess 
+
       if guess == "exit"
         puts "Thanks for playing!"
+
+      elsif good_guess
+        puts "You are correct!"
+        make_guess
       end
     else 
       puts "Game over... better luck next time!"
