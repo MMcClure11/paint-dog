@@ -55,6 +55,10 @@ class PaintDog
         else
           make_guess
         end
+      else
+        @lives -= 1
+        puts "Sorry... you have #{ @lives } chances to paint the dog. Try again!"
+        make_guess
       end
     else 
       puts "Game over... better luck next time!"
