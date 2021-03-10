@@ -19,7 +19,8 @@ class PaintDog
     ]
   end
 
-  def print_teaser
+  def print_teaser last_guess = nil
+    update_teaser(last_guess) unless last_guess.nil?
     puts @word_teaser
   end
 
@@ -35,6 +36,7 @@ class PaintDog
 
       elsif good_guess
         puts "You are correct!"
+        print_teaser guess
         make_guess
       end
     else 
