@@ -24,6 +24,19 @@ class PaintDog
     puts @word_teaser
   end
 
+  def update_teaser last_guess
+    new_teaser = @word_teaser.split
+
+    new_teaser.each_with_index do |letter, index|
+      #replace blank values with guessed letter if matches letter in word
+      if letter == "_" && @word.first[index] == last_guess
+        new_teaser[index] = last_guess
+      end
+    end
+
+    @word_teaser = new_teaser.join(" ")
+  end
+
   def make_guess
     if @lives > 0
       puts "Enter a letter"
