@@ -25,9 +25,14 @@ class PaintDog
 
   def play
     #ask user for a letter
+    puts
     puts "New game started... your word is #{ @word.first.size } characters long"
+    puts
     puts "To exit the game at any point type 'exit'"
     print_teaser
+
+    puts
+    puts "Clue: #{ @word.last }"
   end
 
 end
